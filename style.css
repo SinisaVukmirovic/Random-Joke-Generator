@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    font-family: sans-serif;
+    background-color: #242424;
+}
+
+main {
+    position: relative;
+    background: #abcdef;
+    max-width: 35%;
+    height: 70vh;
+    margin: 15vh auto;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+    main:before, main:after {
+        content: '';
+        position: absolute;
+        width: 10rem;
+        height: 10rem;
+        background: #242424;
+        border-radius: 50%;
+    }
+    main:before {
+        top: -5rem;
+        left: -5rem;
+    }
+    main:after {
+        bottom: -5rem;
+        right: -5rem;
+    }
+
+.btn {
+    align-self: flex-end;
+    padding: .5rem 1.5rem;
+    color: #000;
+    border: solid 3px #242424;
+    margin: 2rem 0;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 900;
+    transition: all .4s;
+    cursor: pointer;
+}
+    .btn:hover {
+        color: #abcdef;
+        background: #242424;
+        border: solid 3px #242424;
+    }
+
+.joke {
+    width: 100%;
+    align-self: flex-end;
+    background: #242424;
+    color: #abcdef;
+    padding: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+    html {
+        font-size: 12px;
+    }
+
+    main {
+        max-width: 85%;
+    }
+
+    .joke {
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+}
